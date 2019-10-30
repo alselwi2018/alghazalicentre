@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+{% block title %}Booking form{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class=" text-white text-center col-md-12" style="background-color: #2e4a86">
+            <h3>Booking Application form</h3>
+            <p>35 Earle Road Liverpool L7 6HA Tel: 0151 734 3843
+                <br>
+                Email: info@alghazalicentre.co.uk
+            </p>
+        </div>
+        <br>
+{{ form_start(form) }}
+        <div class="col-md-12">
+            <div class="row">
+            <div class="col-md-6">
+    {{ form_row(form.OrganisationName) }}
+            </div><div class="col-md-6">
+    {{ form_row(form.email) }}
+            </div><div class="col-md-12">
+    {{ form_row(form.address) }}
+            </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="row">
+            <div class="col-md-4">
+    {{ form_row(form.ContactName) }}
+            </div><div class="col-md-4">
+    {{ form_row(form.ContactNumber) }}
+            </div><div class="col-md-4">
+            </div>
+            </div>
+        </div>
+    {{ form_row(form.reason) }}
+    {{ form_row(form.number_of_people) }}
+    {{ form_row(form.date) }}
+    {{ form_row(form.time) }}
+        <p>Please tick which facility/service you require and the time of use:</p>
+        {{ form_row(form.large_main_hall) }}
+        {{ form_row(form.classroom) }}
+        {{ form_row(form.projector_Screen) }}
+        {{ form_row(form.PASystem) }}
+        <p class="text-center">PRICE LIST FOR FACILITY HIRE</p>
+        <table class="table table-bordered table-striped"><thead><tr><th><strong>Room</strong></th><th><strong>Rate</strong></th></tr></thead>
+            <tbody><tr><td>Large main hall</td><td>£45 per hour</td></tr>
+            <tr><td>Class room</td><td>£25 per hour</td></tr>
+            <tr><td>PA System</td><td>£60</td></tr>
+            <tr><td>Projector & Screen</td><td>£40</td></tr>
+            <tr><td>Caretaker</td><td>£10 per hour</td></tr>
+            </tbody>
+        </table>
+        <p>If you need preparation time you must <u>book</u> an extra hour for preparation & cleaning etc as we expect the centre to be vacated at the time stated.
+        </p>
+        <p>Do you require additional services or facilities such as: Hot water/ Refreshments/ Equipment? (NOTE: These may include extra charges)</p>
+        {{ form_row(form.additional_services) }}
+        <p>Will you be having lunch/food brought in from an outside agency?</p>
+        {{ form_row(form.lunch_food) }}
+        <h1 class="alert alert-danger text-center">Please Note</h1>
+        <p class="highlight_dark_bg">A refundable deposit of £50 must be paid before the event and will be returned after the event on the agreement no damage to any property and the property is vacated on the agreed time and cleaned sufficiently</p>
+        <h4 class="alert alert-success ">CHEQUES PAYABLE TO AL-GHAZALI CENTRE</h4>
+        <div class="card-group table-bordered">
+            <h2 class="card-header bg-primary text-white text-center col-md-12">Terms & Conditions</h2>
+            <div class="card-body">
+                <ul>
+                    <li>Block booking prices can be negotiated with management.</li>
+                    <li>Charges will be based on the agreed fee this also includes hours booked on the booking form</li>
+                    <li>Any incurred cost will be added to the invoice, e.g. Refreshment’s, snacks</li>
+                    <li>To confirm your booking, you need to pay at least 20% of the total cost.</li>
+                    <li>Cancellation fees will be applied on cancellations given without prior notice. 48 hours’ prior notice is needed in case of a cancellation.</li>
+                </ul>
+            </div>
+        </div>
+        <p class="alert alert-danger text-black-50"><b>BY SIGNING THIS AGREEMENT, YOU HAVE AGREED TO DO YOUR UPMOST BEST TO ENSURE THAT THE MAIN HALL BE THE TIDIEST TO YOUR ABILITIES. IF WE ARE NOT SATISFIED WITH THE CLEANLINESS OF THE HALL, YOUR £50 DEPOSIT WILL BE NON-REFUBNADABLE.</b></p>
+        <p><b>PLEASE SIGN THIS FORM CONFIRMING YOU AGREE TO THIS BOOKING</b></p>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

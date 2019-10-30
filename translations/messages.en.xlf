@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="84JO6ni" resname="datatable.datatable.processing">
+        <source>datatable.datatable.processing</source>
+        <target>__datatable.datatable.processing</target>
+      </trans-unit>
+      <trans-unit id="ooGqUxl" resname="datatable.datatable.search">
+        <source>datatable.datatable.search</source>
+        <target>__datatable.datatable.search</target>
+      </trans-unit>
+      <trans-unit id="pVVBLyB" resname="datatable.datatable.lengthMenu">
+        <source>datatable.datatable.lengthMenu</source>
+        <target>__datatable.datatable.lengthMenu</target>
+      </trans-unit>
+      <trans-unit id="8kW5jOB" resname="datatable.datatable.info">
+        <source>datatable.datatable.info</source>
+        <target>__datatable.datatable.info</target>
+      </trans-unit>
+      <trans-unit id="5AiZRiE" resname="datatable.datatable.infoEmpty">
+        <source>datatable.datatable.infoEmpty</source>
+        <target>__datatable.datatable.infoEmpty</target>
+      </trans-unit>
+      <trans-unit id="LvXsJxr" resname="datatable.datatable.infoFiltered">
+        <source>datatable.datatable.infoFiltered</source>
+        <target>__datatable.datatable.infoFiltered</target>
+      </trans-unit>
+      <trans-unit id="Q_GtPoG" resname="datatable.datatable.infoPostFix">
+        <source>datatable.datatable.infoPostFix</source>
+        <target>__datatable.datatable.infoPostFix</target>
+      </trans-unit>
+      <trans-unit id="6fBMelE" resname="datatable.datatable.loadingRecords">
+        <source>datatable.datatable.loadingRecords</source>
+        <target>__datatable.datatable.loadingRecords</target>
+      </trans-unit>
+      <trans-unit id="FjSGUmo" resname="datatable.datatable.zeroRecords">
+        <source>datatable.datatable.zeroRecords</source>
+        <target>__datatable.datatable.zeroRecords</target>
+      </trans-unit>
+      <trans-unit id="eDCpKkz" resname="datatable.datatable.emptyTable">
+        <source>datatable.datatable.emptyTable</source>
+        <target>__datatable.datatable.emptyTable</target>
+      </trans-unit>
+      <trans-unit id="yq95Ed8" resname="datatable.datatable.searchPlaceholder">
+        <source>datatable.datatable.searchPlaceholder</source>
+        <target>__datatable.datatable.searchPlaceholder</target>
+      </trans-unit>
+      <trans-unit id="OnNPCrp" resname="datatable.datatable.paginate.first">
+        <source>datatable.datatable.paginate.first</source>
+        <target>__datatable.datatable.paginate.first</target>
+      </trans-unit>
+      <trans-unit id="U1MAKT0" resname="datatable.datatable.paginate.previous">
+        <source>datatable.datatable.paginate.previous</source>
+        <target>__datatable.datatable.paginate.previous</target>
+      </trans-unit>
+      <trans-unit id="AQi8n1_" resname="datatable.datatable.paginate.next">
+        <source>datatable.datatable.paginate.next</source>
+        <target>__datatable.datatable.paginate.next</target>
+      </trans-unit>
+      <trans-unit id="TbYeaxQ" resname="datatable.datatable.paginate.last">
+        <source>datatable.datatable.paginate.last</source>
+        <target>__datatable.datatable.paginate.last</target>
+      </trans-unit>
+      <trans-unit id="cIFz71W" resname="datatable.datatable.aria.sortAscending">
+        <source>datatable.datatable.aria.sortAscending</source>
+        <target>__datatable.datatable.aria.sortAscending</target>
+      </trans-unit>
+      <trans-unit id="tTSgqiK" resname="datatable.datatable.aria.sortDescending">
+        <source>datatable.datatable.aria.sortDescending</source>
+        <target>__datatable.datatable.aria.sortDescending</target>
+      </trans-unit>
+      <trans-unit id="PEgjRvN" resname="back">
+        <source>back</source>
+        <target>__back</target>
+      </trans-unit>
+      <trans-unit id="t1leKoY" resname="steps">
+        <source>steps</source>
+        <target>__steps</target>
+      </trans-unit>
+      <trans-unit id="RC0B0kv" resname="data_usage_notice">
+        <source>data_usage_notice</source>
+        <target>__data_usage_notice</target>
+      </trans-unit>
+      <trans-unit id="erOYHLx" resname="formFlow.demo">
+        <source>formFlow.demo</source>
+        <target>__formFlow.demo</target>
+      </trans-unit>
+      <trans-unit id="WQa9gVN" resname="formFlow.demo.locationFlow.title">
+        <source>formFlow.demo.locationFlow.title</source>
+        <target>__formFlow.demo.locationFlow.title</target>
+      </trans-unit>
+      <trans-unit id="PmTMQc_" resname="step">
+        <source>step</source>
+        <target>__step</target>
+      </trans-unit>
+      <trans-unit id="olJkYNA" resname="country_intro">
+        <source>country_intro</source>
+        <target>__country_intro</target>
+      </trans-unit>
+      <trans-unit id="7.y0Mtf" resname="confirmation_intro">
+        <source>confirmation_intro</source>
+        <target>__confirmation_intro</target>
+      </trans-unit>
+      <trans-unit id="r.ZOT9U" resname="country">
+        <source>country</source>
+        <target>__country</target>
+      </trans-unit>
+      <trans-unit id="xpfSmBv" resname="region">
+        <source>region</source>
+        <target>__region</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

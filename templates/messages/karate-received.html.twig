@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block title %}Karate Messages{% endblock %}
+{% block body %}
+<div class="container">
+    <table class="table table-striped table-bordered">
+        {% if (form) %}
+            <thead><tr><th>Fullname</th><th>Date of Birth</th><th>Address</th><th>Phone Number</th><th>Action</th></tr></thead>
+            {% for forms in form %}
+                <tr>
+                    <td>{{ forms.FirstName }} {{ forms.LastName }}</td><td>{{ forms.DateOfBirth }}</td><td>{{ forms.HomeAddress }}</td>
+                    <td>{{ forms.ContactNumber }}</td><td><a href="/karate-show/{{ forms.id }}" class="btn btn-primary">Show</a></td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <div class="text-center table-bordered">No Karate forms has been received yet</div>
+        {% endif %}
+    </table>
+</div>
+{% endblock %}

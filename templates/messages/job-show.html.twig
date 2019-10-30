@@ -1,0 +1,245 @@
+{% extends 'base.html.twig' %}
+{% block title %}Show Jobs{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="card-group"><div class="card-header col-md-12" style="background-color: #2e4a86;color: white;"><h3><b>Reference No: </b>{{ job_show.ref }}</h3></div>
+        <div class="card-body table-bordered">
+            <div class="col-sm-12">
+<div class="col-sm-12">
+    <div class="row">
+        <div class="col-sm-3">
+            <p><strong>Position Applied for: </strong> {{ job_show.PositionAppliedFor }}</p>
+        </div>
+        <div class="col-sm-3">
+            <p><strong>Full Name: </strong> {{ job_show.FirstName }}. .{{ job_show.LastName }}</p>
+        </div>
+        <div class="col-sm-3">
+            <p><strong>Address: </strong> {{ job_show.Address }}</p>
+        </div>
+        <div class="col-sm-3">
+            <p><strong>Mobile: </strong> {{ job_show.Mobile }}</p>
+        </div>
+    </div>
+</div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-4">
+                <p><strong>Date of Birth: </strong> {{ job_show.DateOfBirth }}</p>
+            </div>
+            <div class="col-sm-4">
+                <p><strong>Driving Licence: </strong> {{ job_show.DrivingLicence }}</p>
+            </div>
+            <div class="col-sm-4">
+                <p><strong>Car: </strong> {{ job_show.Car }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-4">
+                <p><strong>First Reference Name: </strong> {{ job_show.FirstReferenceName }}</p>
+            </div>
+            <div class="col-sm-4">
+                <p><strong>Reference Relation: </strong> {{ job_show.ReferenceRelation }}</p>
+            </div>
+            <div class="col-sm-4">
+                <p><strong>Reference Contact: </strong> {{ job_show.ContactReference }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-4">
+                {% if job_show.SecondReferenceName %}
+                <p><strong>Second Reference Name: </strong> {{ job_show.SecondReferenceName }}</p>
+                {% endif %}
+            </div>
+            <div class="col-sm-4">
+                {% if job_show.SecondReferenceRelation %}
+                <p><strong>Second Reference Relation: </strong> {{ job_show.SecondReferenceRelation }}</p>
+                {% endif %}
+            </div>
+            <div class="col-sm-4">
+                {% if job_show.SecondReferenceAddress %}
+                <p><strong>Second Reference Address: </strong> {{ job_show.SecondReferenceAddress }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-6">
+                <p><strong>Sign: </strong> {{ job_show.Sign }}</p>
+            </div>
+            <div class="col-sm-6">
+                <p><strong>Date: </strong> {{ job_show.DateSigned }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-2">
+                <p><strong>Employed From: </strong> {{ job_show.EmpFrom }}</p>
+            </div>
+            <div class="col-sm-2">
+                <p><strong>Employed To: </strong> {{ job_show.EmploymentTo }}</p>
+            </div>
+            <div class="col-sm-3">
+                <p><strong>Employer Name & Contact: </strong> {{ job_show.EmployerNameAndContact }}</p>
+            </div>
+            <div class="col-sm-2">
+                <p><b>Position Held</b> {{ job_show.PositionHeld }}</p>
+            </div>
+            <div>
+                <p><b>Reason for Leaving: </b>{{ job_show.ReasonForLeaving }}</p>
+            </div>
+        </div>
+    </div>
+    {% if job_show.EmploymentTwoFrom %}
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-2">
+                <p><strong>Employed Two From: </strong> {{ job_show.EmploymentTwoFrom }}</p>
+            </div>
+            <div class="col-sm-2">
+                <p><strong>Employed Two To: </strong> {{ job_show.EmploymentTwoTo }}</p>
+            </div>
+            <div class="col-sm-3">
+                <p><strong>Employer Two Name & Contact: </strong> {{ job_show.EmployerTwoNameAndContact }}</p>
+            </div>
+            <div class="col-sm-2">
+                <p><b>Position Held</b> {{ job_show.PositionTwoHeld }}</p>
+            </div>
+            <div>
+                <p><b>Reason for Leaving: </b>{{ job_show.ReasonForLeavingTwo }}</p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if job_show.EmploymentThreeFrom %}
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-2">
+                    <p><strong>Employment Three From: </strong> {{ job_show.EmploymentThreeFrom }}</p>
+                </div>
+                <div class="col-sm-2">
+                    <p><strong>Employment Three To: </strong> {{ job_show.EmploymentThreeTo }}</p>
+                </div>
+                <div class="col-sm-3">
+                    <p><strong>Employer Name & Contact: </strong> {{ job_show.EmployerThreeNameAndContact }}</p>
+                </div>
+                <div class="col-sm-2">
+                    <p><b>Position Held</b> {{ job_show.PositionThreeHeld }}</p>
+                </div>
+                <div>
+                    <p><b>Reason for Leaving: </b>{{ job_show.ReasonForLeavingThree }}</p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    {% if job_show.EmploymentFourFrom %}
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-2">
+                    <p><strong>Employment Four From: </strong> {{ job_show.EmploymentFourFrom }}</p>
+                </div>
+                <div class="col-sm-2">
+                    <p><strong>Employment To: </strong> {{ job_show.EmploymentFourTo }}</p>
+                </div>
+                <div class="col-sm-3">
+                    <p><strong>Employer Name & Contact: </strong> {{ job_show.EmployerFourNameAndContact }}</p>
+                </div>
+                <div class="col-sm-2">
+                    <p><b>Position Held</b> {{ job_show.PositionFourHeld }}</p>
+                </div>
+                <div>
+                    <p><b>Reason for Leaving: </b>{{ job_show.ReasonForLeavingFour }}</p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-2">
+                <p><strong>Gaps: </strong> {{ job_show.gaps }}</p>
+            </div>
+            <div class="col-sm-2">
+                <p><strong>Duties: </strong> {{ job_show.duties }}</p>
+            </div>
+        </div>
+    </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-4">
+                    <p><strong>Qualification Name: </strong> {{ job_show.QualificationName }}</p>
+                </div>
+                <div class="col-sm-4">
+                    <p><strong>Obtained From: </strong> {{ job_show.ObtainedFrom }}</p>
+                </div>
+                <div class="col-sm-4">
+                    <p><strong>Qualification Date: </strong> {{ job_show.QualificationDate }}</p>
+                </div>
+            </div>
+        </div>
+    {% if job_show.QualificationTwoName %}
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-4">
+                    <p><strong>Qualification Two Name: </strong> {{ job_show.QualificationTwoName }}</p>
+                </div>
+                <div class="col-sm-4">
+                    <p><strong>Obtained From: </strong> {{ job_show.ObtainedTwoFrom }}</p>
+                </div>
+                <div class="col-sm-4">
+                    <p><strong>Qualification Date: </strong> {{ job_show.QualificationTwoDate }}</p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    {% if job_show.QualificationThreeName %}
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-4">
+                    <p><strong>Qualification Three Name: </strong> {{ job_show.QualificationThreeName }}</p>
+                </div>
+                <div class="col-sm-4">
+                    <p><strong>Obtained From: </strong> {{ job_show.ObtainedThreeFrom }}</p>
+                </div>
+                <div class="col-sm-4">
+                    <p><strong>Qualification Date: </strong> {{ job_show.QualificationThreeDate }}</p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    {% if job_show.QualificationFourName %}
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-4">
+                    <p><strong>Qualification Four Name: </strong> {{ job_show.QualificationFourName }}</p>
+                </div>
+                <div class="col-sm-4">
+                    <p><strong>Obtained From: </strong> {{ job_show.ObtainedFourFrom }}</p>
+                </div>
+                <div class="col-sm-4">
+                    <p><strong>Qualification Date: </strong> {{ job_show.QualificationFourDate }}</p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    <div class="col-md-12">
+        <div class="row">
+            <p><b>Other Training</b>{{ job_show.OtherTraining }}</p>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="row">
+            <p><b>Skills</b>{{ job_show.Skills }}</p>
+            <p><b>Other Skills</b>{{ job_show.OtherSkills }}</p>
+        </div>
+    </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

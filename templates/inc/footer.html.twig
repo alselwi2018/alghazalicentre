@@ -1,0 +1,162 @@
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .social-ul{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+    }
+    .social-ul li{
+        list-style: none;
+        margin: 0 40px;
+
+    }
+    .social-ul li .fa{
+        font-size: 40px;
+        color: #262626;
+        line-height: 80px;
+        transition: .5s;
+
+    }
+    .social-ul li a{
+        position: relative;
+        display: block;
+        width: 80px;
+        height: 80px;
+        background-color: #fff;
+        text-align: center;
+        transform: perspective(100px) rotate(-30deg) skew(25deg) translate(0,0);
+        transition: .5s;
+        box-shadow: -20px 20px 10px rgb(0, 0, 0, 0.5);
+    }
+    .social-ul li a::before{
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: -20px;
+        height: 100%;
+        width: 20px;
+        background: #b1b1b1;
+        transition: .5s;
+        transform: rotate(0deg) skewY(-45deg);
+    }
+    .social-ul li a::after{
+        content: "";
+        position: absolute;
+        top: 80px;
+        left: -11px;
+        height: 20px;
+        width: 100%;
+        background: #b1b1b1;
+        transition: .5s;
+        transform: rotate(0deg) skewX(-45deg);
+    }
+    .social-ul li a:hover{
+        transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+        box-shadow: -50px 50px 50px rgb(0, 0, 0, 0.5);
+    }
+    .social-ul li:hover .fa{
+        color: #fff;
+    }
+    .social-ul li a:hover{
+        transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+        box-shadow: -50px 50px 50px rgb(0, 0, 0, 0.5);
+    }
+    .social-ul li:hover:nth-child(1) a{
+        background: #3b5999;
+    }
+
+    .social-ul li:hover:nth-child(1) a:before{
+        background: #2e4a86;
+    }
+    .social-ul li:hover:nth-child(1) a:after{
+        background: #4a69ad;
+    }
+   .social-ul li:hover:nth-child(2) a{
+        background: #55acee;
+    }
+    .social-ul li:hover:nth-child(2) a:before{
+        background: #4184b7;
+    }
+    .social-ul li:hover:nth-child(2) a:after{
+        background: #4d9fde;
+    }
+
+
+    .social-ul li:hover:nth-child(3) a{
+        background: linear-gradient(#400080, transparent), linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
+    }
+
+    .social-ul li:hover:nth-child(3) a:before{
+        background: linear-gradient(#400080, transparent), linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
+    }
+    .social-ul li:hover:nth-child(3) a:after{
+        background: linear-gradient(#400080, transparent), linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
+    }
+
+</style>
+
+<footer>
+    <div class="col-sm-12"><div class="row">
+    <section class="col-sm-6 fonts" style="background-color: black;color: white;">
+        <div class="text-wrap col-sm-12">
+            <h4 class="text-center" style="color: white;align-items: center;">About Us</h4>
+            <div class="text">
+                <p>The Al-Ghazali Centre is a community centre that responds to the need of the diverse local community through the delivery and provision of social, educational and health programmes and activities. The centre stands as a resource for the community that develops children’s, young people’s and adults social and learning abilities within a safe environment and increases community participation and improves quality of life throughout the community.</p>
+                <p>Over the past 25 years the centre has grown and expanded, starting with a small group of young people and delivering social activities in various buildings around the city to now owning its own building in the heart of the community and opening its doors to over 600 people per week. The centre has gained great experience in delivering projects to the community, sessions are always well attended and a number of programmes are oversubscribed. The Al-Ghazali centre is proud of its partnerships with statutory and voluntary organisations in the city. </p>
+
+            </div>
+        </div>
+        <br><br>
+    </section>
+
+    <section class="col-sm-6" style="background-color: black;">
+        <div class="wpb_wrapper">
+            <div class="wpb_text_column ">
+                <div class="wpb_wrapper text-center">
+                    <h4 style="color: white;align-items: center;">Get in Touch</h4>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <span class="fa fa-building" style="color: white;font-size: 33px"> 35 Earle Road Liverpool L7 6HA</span>
+                <br>
+                <h3 class="fa fa-phone" style="color: white;font-size: 33px">  0151 734 3843</h3><br>
+                <span class="w-contacts-item-value" style="color: white;font-size: 33px">
+              <a href="mailto:Email: info@alghazalicentre.co.uk"><i class="fa fa-envelope"></i> info@alghazalicentre.co.uk</a>
+               </span>
+            </div>
+            <br><br><br>
+            <div class="col-sm-12">
+                <ul class="social-ul">
+                    <li><a href="https://www.facebook.com/profile.php?id=350244841711748"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://twitter.com/AlGhazaliCentre"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.instagram.com/explore/locations/26917685/al-ghazali-centre?hl=ur"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </section>
+        </div>
+    </div>
+          <br><br><br>                          <div class="col-sm-12 text-center">
+
+                                        <div class="footer__copyrights">Copy right reserved © 2019 <?php echo date('Y'); ?></div>
+                                        <div class="footer_ihorizons">
+                                            <span>Designed & Developed by:</span>
+                                            <p onmouseover="normaltxt(this)" >
+                                                <a href="mailto:alselwi_42@hotmail.com" onmouseout="normaltxtout()" class="alert-info" style="height: 50px;background-color: #00c0ef;color: white; " id="txt">
+                                                    Abdulraqeb Al-selwi</a>
+                                            </p>
+                                        </div>
+                                    </div>
+
+</footer>
+
+
+

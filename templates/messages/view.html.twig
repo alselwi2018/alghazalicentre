@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block title %}Show Messages{% endblock %}
+
+
+{% block body %}
+<div class="container">
+
+    <div class="table table-striped">
+        <div style="background-color: #2e4a86;color: white;padding: 20px"><h3 >From {{ view.name }}</h3><br><h4>Subject {{ view.subject }}</h4></div>
+        <div class="table-bordered" style="padding: 30px">
+        {{ view.message }}
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
+

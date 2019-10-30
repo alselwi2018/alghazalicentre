@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block title %}Jobs Received{% endblock %}
+{% block body %}
+<div class="container">
+    {% if job %}
+    <table class="table table-bordered table-striped">
+        <thead><tr><th>Position Applied for</th><th>Full Name</th><th>Address</th><th>Contact Number</th><th>Actions</th></tr></thead>
+        <tbody>
+        {% for jobs in job %}
+        <tr><td>{{ jobs.PositionAppliedFor }}</td><td>{{ jobs.FirstName }} {{ jobs.LastName }}</td><td>{{ jobs.Address }}</td><td>{{ jobs.Mobile }}</td><td><a href="/job-show/{{ jobs.id }}" class="btn btn-primary">Show</a></td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div>
+        <p>No jobs has been received yet</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,115 @@
+{% extends 'base.html.twig' %}
+{% block title %}Karate Form{% endblock %}
+{% block body %}
+<div class="container">
+    {{ form_start(form) }}
+    <div class="text-white text-center bg-dark">
+        <h1>KARATE CLUB and Membership Application Form</h1>
+        <p>35 Earle Road Liverpool
+
+            L7 6HA</p>
+        <p>Tel: 0151 734 3843</p>
+    </div>
+    <div class="card">
+        <div class="text-center card-header bg-primary text-white">
+            <h1>Personal Details</h1></div>
+        <div class="card-body">
+            <div class="row">
+            <div class="col-sm-3">
+                {{ form_row(form.FirstName) }}
+            </div>
+            <div class="col-sm-3">
+                {{ form_row(form.LastName) }}
+            </div>
+            <div class="col-sm-3">
+                {{ form_row(form.DateOfBirth) }}
+            </div>
+            <div class="col-sm-3">
+                {{ form_row(form.Gender) }}
+            </div>
+                <div class="col-sm-12">
+                    {{ form_row(form.Ethnicity) }}
+                </div>
+                <div class="col-sm-3">
+                    {{ form_row(form.HomeAddress) }}
+                </div>
+                <div class="col-sm-3">
+                    {{ form_row(form.PostCode) }}
+                </div>
+                <div class="col-sm-3">
+                    {{ form_row(form.ContactNumber) }}
+                </div>
+                <div class="col-sm-3">
+                    {{ form_row(form.FullNameOfMotherGuardian) }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="card">
+        <div class="text-center card-header bg-primary text-white">
+            <h1>References</h1></div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-12 alert alert-danger">Emergency Contact (Must be different from parent / guardian contact details)</div>
+                <div class="col-sm-4">
+                    {{ form_row(form.EmergencyContactName) }}
+                </div>
+                <div class="col-sm-4">
+                    {{ form_row(form.RelationshipToChild) }}
+                </div>
+                <div class="col-sm-4">
+                    {{ form_row(form.ContactNumberReference) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="text-center card-header bg-primary text-white">
+            <h1>Medication</h1></div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-6">
+                    {{ form_row(form.Medication) }}
+                </div>
+                <div class="col-sm-6">
+                    {{ form_row(form.YesMedication) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="text-center card-header bg-primary text-white">
+            <h1>Declaration</h1></div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-12">
+                    {{ form_row(form.DeclarationOne) }}
+                </div>
+                <div class="col-sm-12">
+                    {{ form_row(form.Consent) }}
+                </div>
+                <div class="col-sm-12">
+                    I hereby agree that all these details are correct and I wish to become a member of the club.
+                    <div class="col-sm-12">
+                    <div class="row">
+                    <div class="col-sm-6">
+                        {{ form_row(form.DeclareName) }}</div><div class="col-sm-6">{{ form_row(form.DeclareDate) }}</div></div></div>
+                </div>
+            </div>
+            <div class="col-sm-12 alert alert-warning">If you are under the age of 16, you MUST have parental consent.</div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-1" style="margin-top: 23px;"> I </div><div class="col-sm-4">{{ form_row(form.Permission) }} </div><div class="col-sm-7"style="margin-top: 23px;">give permission for my son/daughter to become a member of the karate club. I consent to photographs / filming being taken of my child if necessary.
+                    </div>
+                    <div class="col-sm-6">{{ form_row(form.PermitName) }}</div><div class="col-sm-6">{{ form_row(form.PermitDate) }}</div>
+                    </div>
+            </div>
+        </div>
+    </div><br>
+    <div class="text-center">
+        {{ form_row(form.Send) }}
+    </div>
+    {{ form_end(form) }}
+</div>
+{% endblock %}

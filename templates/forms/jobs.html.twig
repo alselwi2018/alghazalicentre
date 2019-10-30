@@ -1,0 +1,265 @@
+{% extends 'base.html.twig' %}
+{% block title %}Job Application{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class=" text-white text-center col-md-12" style="background-color: #2e4a86">
+            <h3>Job Application form</h3>
+            <p>35 Earle Road Liverpool L7 6HA Tel: 0151 734 3843
+<br>
+                Email: info@alghazalicentre.co.uk
+            </p>
+        </div>
+        <br>
+{{ form_start(job) }}
+        <div class="card-group table-bordered">
+        <div class="card-header text-center text-white bg-primary col-md-12">
+            <h3>Personal Details</h3>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-4">
+    {{ form_row(job.PositionAppliedFor) }}
+                </div>
+                <div class="col-sm-4">
+                    {{ form_row(job.FirstName) }}
+                </div>
+                <div class="col-sm-4">
+                    {{ form_row(job.LastName) }}
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-4">
+                    {{ form_row(job.address) }}
+                </div>
+                <div class="col-sm-4">
+                    {{ form_row(job.mobile) }}
+                </div>
+                <div class="col-sm-4">
+                    {{ form_row(job.email) }}
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-4">
+                    {{ form_row(job.DateOfBirth) }}
+                </div>
+                <div class="col-sm-4">
+                    {{ form_row(job.DrivingLicence) }}
+                </div>
+                <div class="col-sm-4">
+                    {{ form_row(job.car) }}
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <br>
+        <div class="card-group table-bordered">
+            <div class="card-header text-center text-white bg-primary col-md-12">
+                <h3>References</h3>
+            </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-4">
+                    {{ form_row(job.FirstReferenceName) }}
+                </div>
+                <div class="col-sm-4">
+                    {{ form_row(job.ReferenceRelation) }}
+                </div>
+                <div class="col-sm-4">
+                    {{ form_row(job.ContactReference) }}
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-4">
+                    {{ form_row(job.SecondReferenceName) }}
+                </div>
+                <div class="col-sm-4">
+                    {{ form_row(job.SecondReferenceRelation) }}
+                </div>
+                <div class="col-sm-4">
+                    {{ form_row(job.SecondReferenceAddress) }}
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-6">
+                    {{ form_row(job.sign) }}
+                </div>
+                <div class="col-sm-6">
+                    {{ form_row(job.DateSigned) }}
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <div class="card-group table-bordered">
+            <div class="card-header text-center text-white bg-primary col-md-12">
+                <h3>Employment History</h3>
+            </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-2">
+                    {{ form_row(job.EmpFrom) }}
+                </div>
+                <div class="col-sm-2">
+                    {{ form_row(job.EmploymentTo) }}
+                </div>
+                <div class="col-sm-3">
+                    {{ form_row(job.EmployerNameAndContact) }}
+                </div>
+                <div class="col-sm-2">
+                    {{ form_row(job.PositionHeld) }}
+                </div>
+                <div class="col-sm-3">{{ form_row(job.ReasonForLeaving) }}</div>
+            </div>
+        </div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-2">
+                        {{ form_row(job.EmploymentTwoFrom) }}
+                    </div>
+                    <div class="col-sm-2">
+                        {{ form_row(job.EmploymentTwoTo) }}
+                    </div>
+                    <div class="col-sm-3">
+                        {{ form_row(job.EmployerTwoNameAndContact) }}
+                    </div>
+                    <div class="col-sm-2">
+                        {{ form_row(job.PositionTwoHeld) }}
+                    </div>
+                    <div class="col-sm-3">{{ form_row(job.ReasonForLeavingTwo) }}</div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-2">
+                        {{ form_row(job.EmploymentThreeFrom) }}
+                    </div>
+                    <div class="col-sm-2">
+                        {{ form_row(job.EmploymentThreeTo) }}
+                    </div>
+                    <div class="col-sm-3">
+                        {{ form_row(job.EmployerThreeNameAndContact) }}
+                    </div>
+                    <div class="col-sm-2">
+                        {{ form_row(job.PositionThreeHeld) }}
+                    </div>
+                    <div class="col-sm-3">{{ form_row(job.ReasonForLeavingThree) }}</div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-2">
+                        {{ form_row(job.EmploymentFourFrom) }}
+                    </div>
+                    <div class="col-sm-2">
+                        {{ form_row(job.EmploymentFourTo) }}
+                    </div>
+                    <div class="col-sm-3">
+                        {{ form_row(job.EmployerFourNameAndContact) }}
+                    </div>
+                    <div class="col-sm-2">
+                        {{ form_row(job.PositionFourHeld) }}
+                    </div>
+                    <div class="col-sm-3">{{ form_row(job.ReasonForLeavingFour) }}</div>
+                </div>
+            </div>
+        </div>
+
+        {{ form_row(job.gaps) }}
+
+        {{ form_row(job.duties) }}
+        <div class="card-group table-bordered">
+            <div class="card-header text-center text-white bg-primary col-md-12">
+                <p style="font-size: 23px"><b>Qualifications</b></p>
+            </div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-6">
+                        {{ form_row(job.QualificationName) }}
+                    </div>
+                    <div class="col-sm-3">
+                        {{ form_row(job.ObtainedFrom) }}
+                    </div>
+                    <div class="col-sm-3">
+                        {{ form_row(job.QualificationDate) }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-6">
+                        {{ form_row(job.QualificationTwoName) }}
+                    </div>
+                    <div class="col-sm-3">
+                        {{ form_row(job.ObtainedTwoFrom) }}
+                    </div>
+                    <div class="col-sm-3">
+                        {{ form_row(job.QualificationTwoDate) }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-6">
+                        {{ form_row(job.QualificationThreeName) }}
+                    </div>
+                    <div class="col-sm-3">
+                        {{ form_row(job.ObtainedThreeFrom) }}
+                    </div>
+                    <div class="col-sm-3">
+                        {{ form_row(job.QualificationThreeDate) }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-6">
+                        {{ form_row(job.QualificationFourName) }}
+                    </div>
+                    <div class="col-sm-3">
+                        {{ form_row(job.ObtainedFourFrom) }}
+                    </div>
+                    <div class="col-sm-3">
+                        {{ form_row(job.QualificationFourDate) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="card-group table-bordered">
+            <div class="card-header text-center text-white bg-primary col-md-12">
+                <p style="font-size: 23px"><b>Other Training</b></p>
+            </div>
+            <div class="col-sm-12">
+            {{ form_row(job.OtherTraining) }}
+            </div>
+        </div>
+        <br>
+        <div class="card-group table-bordered">
+            <div class="card-header text-center text-white bg-primary col-md-12">
+                <p style="font-size: 23px"><b>Skills</b></p>
+            </div>
+            <div class="col-sm-12">
+            {{ form_row(job.skills) }}
+                {{ form_row(job.OtherSkills) }}
+            </div>
+        </div>
+        <br>
+
+    {{ form_end(job) }}
+    </div>
+{% endblock %}

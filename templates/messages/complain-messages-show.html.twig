@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block title %}Complaint show messages{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="col-sm-12">
+        <h1 class="card card-header bg-primary text-center text-white">Complaint messages</h1>
+        <div class="card-body table-bordered">
+            <div class="row">
+                <label class="col-sm-4">Full Name: </label><p class="col-sm-8">{{ complain.FullName }}</p></div>
+            <div class="row">
+                <label class="col-sm-4">Mobile Number: </label><p class="col-sm-8">{{ complain.MobileNumber }}</p></div>
+                <div class="row">
+                    <label class="col-sm-4">Email: </label><p class="col-sm-8">{{ complain.Email }}</p></div>
+                    <div class="row">
+                        <label class="col-sm-4">Subject: </label><p class="col-sm-8">{{ complain.Subject }}</p></div>
+                        <div class="row">
+                            <label class="col-sm-4">Message: </label><p class="col-sm-8">
+            {{ complain.MessageAboutTheComplain }}</p></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

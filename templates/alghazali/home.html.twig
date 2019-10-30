@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block title %}Home{% endblock %}
+{% block body %}
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success text-center size-large">
+            {{ message }}
+        </div>
+    {% endfor %}
+<h1>This main home page for Alghazali</h1>
+
+{% endblock %}

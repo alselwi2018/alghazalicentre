@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="App\Entity\Karate" table="karate">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="firstName" type="string" column="first_name" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="lastName" type="string" column="last_name" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="dateOfBirth" type="string" column="date_of_birth" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="gender" type="string" column="gender" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="ethnicity" type="string" column="ethnicity" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="homeAddress" type="string" column="home_address" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="postCode" type="string" column="post_code" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="contactNumber" type="string" column="contact_number" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="fullNameOfMotherGuardian" type="string" column="full_name_of_mother_guardian" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="emergencyContactName" type="string" column="emergency_contact_name" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="relationshipToChild" type="string" column="relationship_to_child" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="contactNumberReference" type="string" column="contact_number_reference" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="medication" type="string" column="medication" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="yesMedication" type="string" column="yes_medication" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="declarationOne" type="string" column="declaration_one" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="consent" type="string" column="consent" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="declareName" type="string" column="declare_name" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="declareDate" type="string" column="declare_date" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="permission" type="string" column="permission" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="permitName" type="string" column="permit_name" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="permitDate" type="string" column="permit_date" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

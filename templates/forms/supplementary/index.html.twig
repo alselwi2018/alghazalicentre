@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Supplementary{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/craueformflow/css/buttons.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/craueformflow/css/form-flow.css') }}">
+{% endblock %}
+{% block body %}
+
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+
+    <div class="example-wrapper">
+        <div class="back-link">
+            <a href="{{ path('home') }}">{{ 'back' | trans }}</a>
+
+        </div>
+        {% block headline %}{% endblock %}
+        <div class="row">
+            <div class="flow-steps col-sm-4" style="background-color: #a9b7d1">
+                {{- 'steps' | trans }}: {% include '@CraueFormFlow/FormFlow/stepList.html.twig' -%}
+            </div>
+            <div class="col-sm-8">
+                {% block form %}
+
+                {% endblock %}
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
+

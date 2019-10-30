@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="App\Entity\Jobs" table="jobs">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="positionAppliedFor" type="string" column="position_applied_for" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="firstName" type="string" column="first_name" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="lastName" type="string" column="last_name" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="address" type="string" column="address" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="mobile" type="string" column="mobile" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="email" type="string" column="email" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="dateOfBirth" type="string" column="date_of_birth" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="drivingLicence" type="string" column="driving_licence" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="car" type="string" column="car" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="firstReferenceName" type="string" column="first_reference_name" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="referenceRelation" type="string" column="reference_relation" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="secondReferenceName" type="string" column="second_reference_name" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="secondReferenceAddress" type="string" column="second_reference_address" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="secondReferenceRelation" type="string" column="second_reference_relation" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="contactReference" type="string" column="contact_reference" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="sign" type="string" column="sign" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="empFrom" type="string" column="emp_from" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="employmentTo" type="string" column="employment_to" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="employerNameAndContact" type="string" column="employer_name_and_contact" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="positionHeld" type="string" column="position_held" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="reasonForLeaving" type="string" column="reason_for_leaving" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="gaps" type="string" column="gaps" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="duties" type="string" column="duties" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="qualificationName" type="string" column="qualification_name" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="obtainedFrom" type="string" column="obtained_from" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="qualificationDate" type="string" column="qualification_date" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="otherTraining" type="string" column="other_training" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="skills" type="string" column="skills" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="otherSkills" type="string" column="other_skills" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="employmentTwoFrom" type="string" column="employment_two_from" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="employmentTwoTo" type="string" column="employment_two_to" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="employerTwoNameAndContact" type="string" column="employer_two_name_and_contact" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="positionTwoHeld" type="string" column="position_two_held" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="reasonForLeavingTwo" type="string" column="reason_for_leaving_two" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="employmentThreeFrom" type="string" column="employment_three_from" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="employmentThreeTo" type="string" column="employment_three_to" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="positionThreeHeld" type="string" column="position_three_held" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="reasonForLeavingThree" type="string" column="reason_for_leaving_three" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="employmentFourFrom" type="string" column="employment_four_from" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="employmentFourTo" type="string" column="employment_four_to" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="employmentFourNameAndContact" type="string" column="employment_four_name_and_contact" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="positionFourHeld" type="string" column="position_four_held" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="reasonForLeavingFour" type="string" column="reason_for_leaving_four" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="employerThreeNameAndContact" type="string" column="employer_three_name_and_contact" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="employerFourNameAndContact" type="string" column="employer_four_name_and_contact" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="qualificationTwoName" type="string" column="qualification_two_name" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="obtainedTwoFrom" type="string" column="obtained_two_from" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="qualificationTwoDate" type="string" column="qualification_two_date" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="qualificationThreeName" type="string" column="qualification_three_name" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="obtainedThreeFrom" type="string" column="obtained_three_from" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="qualificationThreeDate" type="string" column="qualification_three_date" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="qualificationFourName" type="string" column="qualification_four_name" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="obtainedFourFrom" type="string" column="obtained_four_from" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="qualificationFourDate" type="string" column="qualification_four_date" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="ref" type="string" column="ref" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="dateSigned" type="string" column="date_signed" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="dateCreated" type="datetime" column="date_created" nullable="false"/>
+  </entity>
+</doctrine-mapping>

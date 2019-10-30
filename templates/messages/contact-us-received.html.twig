@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block title %}Contact Us{% endblock %}
+{% block body %}
+<div class="container">
+{% if contact %}
+    <table class="table table-striped">
+        <thead><tr><th>From</th><th>Title</th><th>Action</th></tr></thead>
+        <tbody>
+        {% for contacts in contact %}
+            <tr>
+                <td>{{ contacts.name }}</td><td>{{ contacts.subject }}</td><td><a href="{{ path('messages_id', { 'id':contacts.id }) }}" class="btn btn-primary">Show</a> </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div>
+        <h3>No Contact Messages received</h3>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

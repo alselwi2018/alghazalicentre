@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block title %}Complain Form{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class=" text-white text-center col-md-12" style="background-color: #2e4a86">
+            <h3><b>Complain form</b></h3>
+            <p>35 Earle Road Liverpool L7 6HA Tel: 0151 734 3843
+                <br>
+                Email: info@alghazalicentre.co.uk
+            </p>
+        </div>
+        <br>
+    {{ form_start(complain) }}
+    {{ form_widget(complain) }}
+    {{ form_end(complain) }}
+    </div>
+{% endblock %}

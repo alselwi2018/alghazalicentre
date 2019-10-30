@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+{% block title %}Booking id {{ booking.id }}{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="card-group"><div class="card-header"><h3><b>Reference No: </b>{{ booking.ref }}</h3></div>
+        <div class="card-body">
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-4">
+    <p><strong>Organisation Name:</strong> {{ booking.OrganisationName }}</p>
+            </div><div class="col-sm-4">
+    <p><strong>Email:</strong> {{ booking.email }}</p>
+            </div><div class="col-sm-4">
+    <p><strong>Contact Name:</strong> {{ booking.ContactName }}</p>
+            </div></div></div>
+
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-4">
+    <p><strong>Address:</strong> {{ booking.address }}</p>
+                </div><div class="col-sm-4">
+    <p><strong>Contact Number</strong> {{ booking.ContactNumber }}</p>
+                </div><div class="col-sm-4">
+    <p><strong>Reason:</strong> {{ booking.reason }}</p>
+                </div></div></div>
+
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-4">
+    <p><strong>Number of People:</strong> {{ booking.NumberOfPeople }}</p>
+                    </div><div class="col-sm-4">
+    <p><strong>Date:</strong> {{ booking.date }}</p>
+                    </div><div class="col-sm-4">
+    <p><strong>Time:</strong> {{ booking.time }}</p>
+                    </div></div></div>
+
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            {% if booking.LargeMainHall %}
+    <p><strong>Large Main Hall:</strong> {{ booking.LargeMainHall }}</p>
+                            {% endif %}
+                        </div><div class="col-sm-4">
+                            {% if booking.classroom %}
+    <p><strong>Classroom:</strong> {{ booking.classroom }}</p>
+                            {% endif %}
+                        </div><div class="col-sm-4">
+                            {% if booking.ProjectorScreen %}
+    <p><strong>Project & Screen</strong> {{ booking.ProjectorScreen }}</p>
+                            {% endif %}
+                        </div></div></div>
+
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                {% if booking.PaSystem  %}
+    <p><strong>PA System</strong> {{ booking.PaSystem }}</p>
+                                {% endif %}
+                            </div><div class="col-sm-4">
+                                {% if booking.AdditionalServices %}
+    <p><strong>Additional Services</strong> {{ booking.AdditionalServices }}</p>
+                                {% endif %}
+                            </div><div class="col-sm-4">
+                                {% if booking.LunchFood %}
+    <p><strong>Food brought from outside</strong> {{ booking.LunchFood }}</p>
+                                {% endif %}
+                            </div></div></div>
+
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-4">
+    <p><strong>Sign Name:</strong> {{ booking.signName }}</p>
+                                </div><div class="col-sm-4">
+    <p><strong>Signature</strong> {{ booking.signature }}</p>
+                                </div><div class="col-sm-4">
+    <p><strong>Date</strong> {{ booking.SignDate }}</p>
+                                </div></div></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

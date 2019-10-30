@@ -1,0 +1,127 @@
+{% extends 'base.html.twig' %}
+{% block title %}Show Karate message{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="col-sm-12">
+        <div class="row">
+    <div class="col-sm-3 text-white text-center" style="background-color: gray"><p><b>Reference No</b></p> <h3 style="color: wheat">{{ em.id }}</h3></div>
+            <div class="col-sm-9">
+    <div class="col-sm-12">
+        <h3 class="card card-header bg-primary text-white text-center">Personal Details</h3>
+        <div class="row card-body ">
+            <div class="col-sm-3">
+                <label>First Name: </label>
+                {{ em.FirstName }}
+            </div>
+            <div class="col-sm-3">
+                <label class="w-form-row-label">Last Name: </label>
+                {{ em.LastName }}
+            </div>
+            <div class="col-sm-3"><label class="w-form-row-label">DOB: </label>
+            {{ em.DateOfBirth }}
+            </div>
+            <div class="col-sm-3">
+                <label class="w-form-row-label">Gender: </label>
+                {{ em.Gender }}
+            </div>
+        </div>
+    </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label>Ethnicity: </label>
+                            {% if em.Ethnicity %}
+                            {% for eth in em.Ethnicity %}
+                                {{ eth }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                        <div class="col-sm-3">
+                            <label class="w-form-row-label">Home Address: </label>
+                            {{ em.HomeAddress }}
+                        </div>
+                        <div class="col-sm-3"><label class="w-form-row-label">Post Code: </label>
+                            {{ em.PostCode }}
+                        </div>
+                        <div class="col-sm-3">
+                            <label class="w-form-row-label">Contact Number: </label>
+                            {{ em.ContactNumber }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label>Full Name of Mother/Guardian: </label>
+                            {{ em.FullNameOfMotherGuardian }}
+                        </div>
+                        <div class="card col-sm-12">
+                            <h1 class="card-header bg-primary text-center text-white">Reference Details</h1>
+                            <div class="card-body">
+                                <div class="col-sm-4">
+                                    <label>Emergency Contact Name: </label>
+                                    {{ em.EmergencyContactName }}
+                                </div>
+                                <div class="col-sm-4">
+                                    <label>Relationship To Child: </label>
+                                    {{ em.RelationshipToChild }}
+                                </div>
+                                <div class="col-sm-4">
+                                    <label>Contact number reference</label>
+                                    {{ em.ContactNumberReference }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="card col-sm-12">
+                            <h1 class="card-header bg-primary text-center text-white">Medical Details</h1>
+                            <div class="card-body">
+                                <div class="col-sm-4">
+                                    <label>Do you have any physical incapacities that may impair your training?: </label>
+                                    {{ em.Medication }}
+                                </div>
+                                <div class="col-sm-8">
+                                    <label>If Yes: </label>
+                                    {{ em.YesMedication }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="card col-sm-12">
+                            <h1 class="card-header bg-primary text-center text-white">Declaration</h1>
+                            <div class="card-body">
+                                <div class="col-sm-12">
+                                    <label>Do you have any physical incapacities that may impair your training?: </label>
+                                    {{ em.DeclarationOne }}
+                                </div>
+                                <div class="col-sm-12">
+                                    <label>I consent for my personal data in this form to be passed on to LCC and other organisations deemed necessary for data analysis and I understand that I can withdraw my consent at any time: </label>
+                                    {{ em.Consent }}
+                                </div>
+                                <div class="col-sm-12">
+                                    <label>Name </label>
+                                    {{ em.DeclareName }}
+
+                                    <label>Date: </label>
+                                    {{ em.DeclareDate }}
+                                </div>
+                                <div class="col-sm-12">
+                                    I {{ em.Permission }} give permission for my son/daughter to become a member of the karate club. I consent to photographs / filming being taken of my child if necessary.
+                                    <label>Name: </label>{{ em.PermitName }}
+                                      <label>Date: </label>{{ em.PermitDate }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

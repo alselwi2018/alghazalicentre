@@ -1,0 +1,204 @@
+{% extends 'forms/supplementary/index.html.twig' %}
+
+{% block form %}
+    {% set routeParams = app.request.query.all() | merge(app.request.attributes.get('_route_params')) %}
+    {% if flow.isAllowDynamicStepNavigation() %}
+        {% set routeParams = routeParams | craue_removeDynamicStepNavigationParameters(flow) %}
+    {% endif %}
+
+    {{ form_start(form, {'action': path(app.request.attributes.get('_route'), routeParams), 'attr': {'class': 'flow-form'}}) }}
+    <fieldset class="container">
+        <legend style="background-color: gray;color: white">
+            {{ 'step' | trans }} {{ flow.getCurrentStepNumber() }}: {{ flow.getCurrentStepLabel() | trans }}
+        </legend>
+        {{ form_errors(form) }}
+        {% if flow.getCurrentStepNumber() == 1 %}
+            {{ 'personal_intro' | trans }}
+        {% endif %}
+        {% if flow.getCurrentStepNumber() == 9 %}
+            {{ 'confirmation_intro' | trans }}
+            <br/>
+
+            <div class="row">
+                <div class="col-sm-4"><b>{{ 'First Name' }}:</b></div>
+                <div class="col-sm-8">{{ formData.FirstName }}</div>
+            </div>
+        <div class="row">
+            <div class="col-sm-4"><b>{{ 'Last Name' }}:</b></div>
+            <div class="col-sm-8">{{ formData.LastName }}</div>
+        </div>
+            <div class="row">
+                <div class="col-sm-4"><b>{{ 'Date of birth' }}:</b></div>
+                <div class="col-sm-8">{{ formData.DateOfBirth | date("m/d/Y") }}</div>
+            </div>
+                <div class="row">
+                    <div class="col-sm-4"><b>{{ 'Age' }}:</b></div>
+                    <div class="col-sm-8">{{ formData.Age }}</div>
+                </div>
+                    <div class="row">
+                        <div class="col-sm-4"><b>{{ 'Gender' }}:</b></div>
+                        <div class="col-sm-8">{{ formData.Gender }}</div>
+                    </div>
+                        <div class="row">
+                            <div class="col-sm-4"><b>{{ 'Nationality' }}:</b></div>
+                                <div class="col-sm-8">{{ formData.Nationality }}</div>
+                        </div>
+                                <div class="row">
+                                    <div class="col-sm-4"><b>{{ 'Ethnicity' }}:</b></div>
+                            {% for eth in formData.Ethnicity %}
+                                <div class="col-sm-8">{{ eth }}</div>
+                            {% endfor %}
+                                </div>
+        <div class="row">
+            <div class="col-sm-4"><b>{{ 'Home Address' }}:</b></div>
+            <div class="col-sm-8">{{ formData.HomeAddress }}</div>
+        </div>
+            <div class="row">
+                <div class="col-sm-4"><b>{{ 'Place Of Birth' }}:</b></div>
+                <div class="col-sm-8">{{ formData.PlaceOfBirth }}</div>
+            </div>
+            {% if formData.FullNameOfFather %}
+            <div class="row">
+                <div class="col-sm-4"><b>{{ 'FullName Of Father' }}:</b></div>
+                <div class="col-sm-8">{{ formData.FullNameOfFather }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"><b>{{ 'Guardian' }}:</b></div>
+                <div class="col-sm-8">{{ formData.Guardian }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"><b>{{ 'Contact Number' }}:</b></div>
+                <div class="col-sm-8">{{ formData.ContactNumber }}</div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4"><b>{{ 'Email' }}:</b></div>
+                <div class="col-sm-8">{{ formData.Email }}</div>
+            </div>
+            {% endif %}
+        {% if formData.FullNameOfMother %}
+            <div class="row">
+                <div class="col-sm-4"><b>{{ 'Full Name Of Mother' }}:</b></div>
+                <div class="col-sm-8">{{ formData.FullNameOfMother }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Guardian' }}:</b></div>
+                <div class="col-sm-7">{{ formData.Guardian2 }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Contact Number' }}:</b></div>
+                <div class="col-sm-7">{{ formData.ContactNumberTwo }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Email' }}:</b></div>
+                <div class="col-sm-7">{{ formData.EmailTwo }}</div>
+            </div>
+            {% endif %}
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Language Spoken At Home' }}:</b></div>
+                <div class="col-sm-7">{{ formData.LanguageSpokenAtHome }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Language Understood By Student' }}:</b></div>
+                <div class="col-sm-7">{{ formData.LanguageUnderstoodByStudent }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Suffer' }}:</b></div>
+                <div class="col-sm-7">{{ formData.Suffer }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Medication' }}:</b></div>
+                <div class="col-sm-7">{{ formData.Medication }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Learning Difficulties' }}:</b></div>
+                <div class="col-sm-7">{{ formData.LearningDifficulties }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'difficulties Specifies' }}:</b></div>
+                <div class="col-sm-7">{{ formData.difficultiesSpecifies }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Additional Support' }}:</b></div>
+                <div class="col-sm-7">{{ formData.AdditionalSupport }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Parent Residential' }}:</b></div>
+                {% for par in formData.ParentResidential %}
+                <div class="col-sm-7">{{ par }}</div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Mother Status' }}:</b></div>
+                {% for moth in formData.MotherStatus %}
+                <div class="col-sm-7">{{ moth }}</div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Emergency Contact Name' }}:</b></div>
+                <div class="col-sm-7">{{ formData.EmergencyContactName }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Relationship To Child' }}:</b></div>
+                <div class="col-sm-7">{{ formData.RelationshipToChild }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Emergency Contact Number' }}:</b></div>
+                <div class="col-sm-7">{{ formData.EmergencyContactNumber }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'SchoolAttending' }}:</b></div>
+                <div class="col-sm-7">{{ formData.SchoolAttending }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Year Group' }}:</b></div>
+                <div class="col-sm-7">{{ formData.YearGroup }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Attend Arabic School' }}:</b></div>
+                <div class="col-sm-7">{{ formData.AttendArabicSchool }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Yes Attended' }}:</b></div>
+                <div class="col-sm-7">{{ formData.YesAttended }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Attend From Date' }}:</b></div>
+                <div class="col-sm-7">{{ formData.AttendFromDate | date("m/d/Y") }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Attend To Date' }}:</b></div>
+                <div class="col-sm-7">{{ formData.AttendToDate | date("m/d/Y") }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Arabic Level' }}:</b></div>
+                <div class="col-sm-7">{{ formData.ArabicLevel }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Photo Consent' }}:</b></div>
+                <div class="col-sm-7">{{ formData.PhotoConsent }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Full Name Of Parent Guardian' }}:</b></div>
+                <div class="col-sm-7">{{ formData.FullNameOfParentGuardian }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Signature' }}:</b></div>
+                <div class="col-sm-7">{{ formData.Signature }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Date' }}:</b></div>
+                <div class="col-sm-7">{{ formData.Date | date('d/M/y') }}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><b>{{ 'Where do you Heared About Alghazali' }}:</b></div>
+                <div class="col-sm-7">{{ formData.hearedAboutAlghazali }}</div>
+            </div>
+
+
+        {% endif %}
+        {{ form_rest(form) }}
+    </fieldset>
+    {% include '@CraueFormFlow/FormFlow/buttons.html.twig' %}
+    {{ form_end(form) }}
+{% endblock %}
